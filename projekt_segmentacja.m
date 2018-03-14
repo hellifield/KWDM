@@ -1,9 +1,8 @@
 % sekcja czyszczenia
 clear all; clc; close all;
 
-% nazwy obrazów w sekwencji (2 sekwencje do wyboru; nale¿y odkomentowaæ wybran¹ sekwencjê)
-names = {'IMG0005', 'IMG0006', 'IMG0007b', 'IMG0008', 'IMG0009', 'IMG0010'};
-%names = {'IM17', 'IM18', 'IM19', 'IM20', 'IM21', 'IM22', 'IM23', 'IM24', 'IM25', 'IM26'};
+% nazwy obrazów w sekwencji 
+names = {'IM17.jpg', 'IM18.jpg', 'IM19.jpg', 'IM20.jpg', 'IM21.jpg', 'IM22.jpg'};
 
 % rozmiary komór, ptrzebne do funkcji bwareaopen
 sizes = [20 100 1500 1500 500 500];
@@ -138,8 +137,9 @@ se = [1 1 1 1 1 1 1 1;
 %     hold on;
 
     % wyciêcie wszystkiego oprócz komór
+    
     vent1 = bwareaopen(erode1, sizes(i));  % drugi argument mówi o tym jak du¿y element 
-                                          % powinien byæ zostawiamy
+                                  % powinien byæ zostawiamy
 
     % powtórzenie procesu dla czêœci po drugiej stronie osi symetrii
     xo = xo2; % zmiana punktu wskazanej klasy
